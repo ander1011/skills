@@ -88,7 +88,7 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="faq" className="relative py-12 md:py-16 overflow-hidden">
       <div className="bg-orb bg-orb-2 w-[300px] h-[300px] bg-[#8b5cf6] top-[30%] -left-[100px]" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,7 +122,6 @@ export default function FAQ() {
         </div>
       </div>
 
-      <div className="section-divider mt-24" />
     </section>
   );
 }

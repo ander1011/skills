@@ -6,7 +6,7 @@ import CodeRainBackground from "./ui/CodeRainBackground";
 
 export default function CTA() {
   return (
-    <section id="contato" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="contato" className="relative py-12 md:py-16 overflow-hidden">
       <div className="absolute inset-0 animated-gradient-bg" />
       <div className="absolute inset-0 opacity-50"><CodeRainBackground /></div>
       <div className="bg-orb bg-orb-1 w-[600px] h-[600px] bg-[#8b5cf6] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.1]" />

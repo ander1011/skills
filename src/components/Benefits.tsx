@@ -15,7 +15,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section id="beneficios" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="beneficios" className="relative py-12 md:py-16 overflow-hidden">
       <div className="bg-orb bg-orb-1 w-[400px] h-[400px] bg-[#10b981] top-[30%] -right-[100px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +43,6 @@ export default function Benefits() {
           ))}
         </div>
       </div>
-      <div className="section-divider mt-24" />
     </section>
   );
 }

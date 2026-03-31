@@ -16,7 +16,7 @@ const features = [
 
 export default function Pricing() {
   return (
-    <section id="precos" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="precos" className="relative py-12 md:py-16 overflow-hidden">
       <div className="bg-orb bg-orb-1 w-[500px] h-[500px] bg-[#8b5cf6] top-0 -right-[200px]" />
       <div className="bg-orb bg-orb-2 w-[400px] h-[400px] bg-[#10b981] bottom-0 -left-[150px]" />
 
@@ -74,7 +74,6 @@ export default function Pricing() {
           </div>
         </motion.div>
       </div>
-      <div className="section-divider mt-24" />
     </section>
   );
 }

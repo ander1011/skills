@@ -20,7 +20,7 @@ const painStats = [
 
 export default function Problems() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section className="relative py-12 md:py-16 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left - text */}
@@ -63,7 +63,6 @@ export default function Problems() {
           </div>
         </div>
       </div>
-      <div className="section-divider mt-24" />
     </section>
   );
 }

@@ -13,7 +13,7 @@ const reasons = [
 
 export default function WhyCloudConta() {
   return (
-    <section id="porque" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="porque" className="relative py-12 md:py-16 overflow-hidden">
       <div className="bg-orb bg-orb-2 w-[400px] h-[400px] bg-[#8b5cf6] bottom-[20%] -left-[100px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +56,6 @@ export default function WhyCloudConta() {
           </motion.div>
         </div>
       </div>
-      <div className="section-divider mt-24" />
     </section>
   );
 }

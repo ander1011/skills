@@ -25,7 +25,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section ref={sectionRef} className="relative flex items-center justify-center overflow-hidden pt-24 pb-12 md:pt-32 md:pb-16">
       {/* Local background effects (orbs + grid only, particles & lightning are global) */}
       <div className="absolute inset-0">
         <CodeRainBackground />
@@ -34,7 +34,7 @@ export default function Hero() {
         <div className="absolute inset-0 grid-bg opacity-30" />
       </div>
 
-      <motion.div style={{ y: textY, opacity }} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <motion.div style={{ y: textY, opacity }} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
         <motion.div variants={stagger} initial="hidden" animate="show" className="text-center max-w-4xl mx-auto">
           <motion.div variants={fadeUp} className="mb-8">
             <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#8b5cf6]/30 bg-[#8b5cf6]/10 text-[#a855f7] text-sm font-medium backdrop-blur-sm">

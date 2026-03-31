@@ -48,12 +48,12 @@ const modules = [
 
 export default function Modules() {
   return (
-    <section id="modulos" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="modulos" className="relative py-12 md:py-16 overflow-hidden">
       <div className="bg-orb bg-orb-2 w-[500px] h-[500px] bg-[#8b5cf6] top-[20%] -left-[200px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ParallaxSection speed={0.12}>
-          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="mb-20">
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="mb-10">
             <span className="text-[#a855f7] text-sm font-semibold tracking-widest uppercase mb-4 block">NOSSOS MÓDULOS</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">
               Tudo que seu escritório precisa.<br />Em uma única plataforma.
@@ -114,7 +114,6 @@ export default function Modules() {
           ))}
         </div>
       </div>
-      <div className="section-divider mt-24" />
     </section>
   );
 }
