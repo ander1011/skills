@@ -1,7 +1,11 @@
 "use client";
 
+import FullPageLightning from "@/components/ui/FullPageLightning";
+import ParticlesBackground from "@/components/ui/ParticlesBackground";
+import FloatingCard from "@/components/ui/FloatingCard";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import SystemShowcase from "@/components/SystemShowcase";
 import Problems from "@/components/Problems";
 import Modules from "@/components/Modules";
 import Benefits from "@/components/Benefits";
@@ -15,19 +19,59 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <Problems />
-        <Modules />
-        <Benefits />
-        <WhyCloudConta />
-        <Testimonials />
-        <Pricing />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
+      {/* Fixed backgrounds — particles + lightning */}
+      <div className="fixed inset-0 z-0">
+        <ParticlesBackground />
+      </div>
+      <FullPageLightning />
+
+      {/* Page content */}
+      <div className="relative z-[2]">
+        <Header />
+        <main>
+          <Hero />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 pb-12">
+            <FloatingCard className="p-0 overflow-hidden">
+              <SystemShowcase />
+            </FloatingCard>
+
+            <FloatingCard className="p-0 overflow-hidden">
+              <Problems />
+            </FloatingCard>
+
+            <FloatingCard className="p-0 overflow-hidden">
+              <Modules />
+            </FloatingCard>
+
+            <FloatingCard className="p-0 overflow-hidden">
+              <Benefits />
+            </FloatingCard>
+
+            <FloatingCard className="p-0 overflow-hidden">
+              <WhyCloudConta />
+            </FloatingCard>
+
+            <FloatingCard className="p-0 overflow-hidden">
+              <Testimonials />
+            </FloatingCard>
+
+            <FloatingCard className="p-0 overflow-hidden">
+              <Pricing />
+            </FloatingCard>
+
+            <FloatingCard className="p-0 overflow-hidden">
+              <FAQ />
+            </FloatingCard>
+
+            <FloatingCard className="p-0 overflow-hidden">
+              <CTA />
+            </FloatingCard>
+          </div>
+
+          <Footer />
+        </main>
+      </div>
     </>
   );
 }
