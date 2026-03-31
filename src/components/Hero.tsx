@@ -3,8 +3,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import LightningAnimation from "./ui/LightningAnimation";
-import ParticlesBackground from "./ui/ParticlesBackground";
 import CodeRainBackground from "./ui/CodeRainBackground";
 
 const stats = [
@@ -23,20 +21,18 @@ const fadeUp = {
 export default function Hero() {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const textY = useTransform(scrollYProgress, [0, 1], [0, -80]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <motion.div className="absolute inset-0" style={{ y: bgY }}>
-        <LightningAnimation />
-        <ParticlesBackground />
+      {/* Local background effects (orbs + grid only, particles & lightning are global) */}
+      <div className="absolute inset-0">
         <CodeRainBackground />
         <div className="bg-orb bg-orb-1 w-[700px] h-[700px] bg-[#8b5cf6] -top-[300px] -left-[200px]" />
         <div className="bg-orb bg-orb-2 w-[600px] h-[600px] bg-[#10b981] -bottom-[200px] -right-[200px]" />
         <div className="absolute inset-0 grid-bg opacity-30" />
-      </motion.div>
+      </div>
 
       <motion.div style={{ y: textY, opacity }} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <motion.div variants={stagger} initial="hidden" animate="show" className="text-center max-w-4xl mx-auto">
@@ -83,8 +79,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </motion.div>
-
-      <div className="absolute bottom-0 left-0 right-0 section-divider" />
     </section>
   );
 }
