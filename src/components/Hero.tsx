@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import LightningAnimation from "./ui/LightningAnimation";
+import ParticlesBackground from "./ui/ParticlesBackground";
 import CodeRainBackground from "./ui/CodeRainBackground";
 
 const stats = [
@@ -30,6 +31,7 @@ export default function Hero() {
     <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <motion.div className="absolute inset-0" style={{ y: bgY }}>
         <LightningAnimation />
+        <ParticlesBackground />
         <CodeRainBackground />
         <div className="bg-orb bg-orb-1 w-[700px] h-[700px] bg-[#8b5cf6] -top-[300px] -left-[200px]" />
         <div className="bg-orb bg-orb-2 w-[600px] h-[600px] bg-[#10b981] -bottom-[200px] -right-[200px]" />

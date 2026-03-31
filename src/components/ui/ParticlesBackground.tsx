@@ -20,7 +20,7 @@ const particlesOptions: ISourceOptions = {
         distance: 150,
         links: {
           opacity: 0.3,
-          color: "#00d4ff",
+          color: "#a855f7",
         },
       },
     },
@@ -30,7 +30,7 @@ const particlesOptions: ISourceOptions = {
       value: 80,
       density: { enable: true, width: 1920, height: 1080 },
     },
-    color: { value: ["#2563eb", "#00d4ff", "#8b5cf6", "#60a5fa"] },
+    color: { value: ["#8b5cf6", "#a855f7", "#3b82f6", "#10b981"] },
     opacity: {
       value: { min: 0.05, max: 0.3 },
       animation: { enable: true, speed: 0.3, sync: false },
@@ -42,7 +42,7 @@ const particlesOptions: ISourceOptions = {
     links: {
       enable: true,
       distance: 120,
-      color: "#2563eb",
+      color: "#8b5cf6",
       opacity: 0.06,
       width: 1,
     },
