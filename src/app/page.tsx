@@ -2,8 +2,10 @@
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import About from "@/components/About";
+import Problems from "@/components/Problems";
+import Modules from "@/components/Modules";
+import Benefits from "@/components/Benefits";
+import WhyCloudConta from "@/components/WhyCloudConta";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
@@ -16,8 +18,10 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Services />
-        <About />
+        <Problems />
+        <Modules />
+        <Benefits />
+        <WhyCloudConta />
         <Testimonials />
         <Pricing />
         <FAQ />

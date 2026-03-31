@@ -2,23 +2,24 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CloudConta | Contabilidade Digital Inteligente",
+  title: "CloudConta | Plataforma Contábil Inteligente",
   description:
-    "Plataforma completa de contabilidade digital, fiscal, folha de pagamento e gestão empresarial na nuvem. Automatize sua empresa com a CloudConta.",
+    "NF-e, NFSe, obrigações fiscais, envio por WhatsApp, portal do cliente — tudo que você faz manualmente, o CloudConta automatiza. Um sistema. Todos os módulos. Zero dor de cabeça.",
   keywords: [
-    "contabilidade digital",
-    "contabilidade online",
-    "ERP",
-    "gestão fiscal",
-    "folha de pagamento",
-    "eSocial",
-    "abertura de empresa",
     "CloudConta",
+    "contabilidade automática",
+    "NF-e",
+    "NFSe",
+    "obrigações fiscais",
+    "WhatsApp contabilidade",
+    "portal do cliente contábil",
+    "escritório contábil automático",
+    "sistema contábil",
   ],
   openGraph: {
-    title: "CloudConta | Contabilidade Digital Inteligente",
+    title: "CloudConta | Seu escritório contábil no piloto automático",
     description:
-      "Automatize sua gestão fiscal, folha de pagamento e contabilidade em uma única plataforma na nuvem.",
+      "NF-e, NFSe, obrigações fiscais, envio por WhatsApp, portal do cliente — tudo automatizado. Um sistema. Todos os módulos.",
     url: "https://v2.cloudconta.com.br",
     siteName: "CloudConta",
     locale: "pt_BR",
@@ -33,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="antialiased">
-      <body className="min-h-screen bg-[#050510] text-[#e2e8f0]">
+      <body className="min-h-screen bg-[#0d0b1a] text-[#e2e8f0]">
         {children}
       </body>
     </html>

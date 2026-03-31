@@ -48,7 +48,7 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className={`glass-card rounded-2xl overflow-hidden transition-all duration-500 ${
-        open ? "ring-1 ring-[#2563eb]/20 shadow-[0_0_30px_rgba(37,99,235,0.08)]" : ""
+        open ? "ring-1 ring-[#8b5cf6]/20 shadow-[0_0_30px_rgba(139,92,246,0.08)]" : ""
       }`}
     >
       <button
@@ -62,7 +62,7 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
           animate={{ rotate: open ? 45 : 0, scale: open ? 1.1 : 1 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
           className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${
-            open ? "bg-[#2563eb]/20 text-[#60a5fa]" : "bg-white/5 text-gray-400 group-hover:text-white"
+            open ? "bg-[#8b5cf6]/20 text-[#a855f7]" : "bg-white/5 text-gray-400 group-hover:text-white"
           }`}
         >
           <Plus className="w-4 h-4" />
@@ -89,7 +89,7 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
 export default function FAQ() {
   return (
     <section id="faq" className="relative py-24 md:py-32 overflow-hidden">
-      <div className="bg-orb bg-orb-2 w-[300px] h-[300px] bg-[#2563eb] top-[30%] -left-[100px]" />
+      <div className="bg-orb bg-orb-2 w-[300px] h-[300px] bg-[#8b5cf6] top-[30%] -left-[100px]" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -101,8 +101,8 @@ export default function FAQ() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <span className="text-[#2563eb] text-sm font-semibold tracking-widest uppercase mb-4 block">
-              FAQ
+            <span className="text-[#a855f7] text-sm font-semibold tracking-widest uppercase mb-4 block">
+              PERGUNTAS FREQUENTES
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6">
               Perguntas{" "}
