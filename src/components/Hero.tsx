@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Play, Users, Clock, Star } from "lucide-react";
-import ParticlesBackground from "./ui/ParticlesBackground";
+import LightningAnimation from "./ui/LightningAnimation";
 import CodeRainBackground from "./ui/CodeRainBackground";
 
 const stats = [
@@ -39,14 +39,16 @@ export default function Hero() {
     <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Layered backgrounds with parallax */}
       <motion.div className="absolute inset-0" style={{ y: bgY }}>
-        <ParticlesBackground />
+        {/* Lightning effect - main visual */}
+        <LightningAnimation />
+        {/* Code rain behind lightning */}
         <CodeRainBackground />
         {/* Animated gradient orbs */}
         <div className="bg-orb bg-orb-1 w-[700px] h-[700px] bg-[#2563eb] -top-[300px] -left-[200px]" />
         <div className="bg-orb bg-orb-2 w-[600px] h-[600px] bg-[#8b5cf6] -bottom-[200px] -right-[200px]" />
         <div className="bg-orb bg-orb-1 w-[400px] h-[400px] bg-[#00d4ff] top-[30%] right-[10%]" />
         {/* Grid overlay */}
-        <div className="absolute inset-0 grid-bg opacity-40" />
+        <div className="absolute inset-0 grid-bg opacity-30" />
       </motion.div>
 
       <motion.div
