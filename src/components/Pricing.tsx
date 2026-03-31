@@ -22,7 +22,7 @@ export default function Pricing() {
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <ParallaxSection speed={0.12}>
-          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial={{ opacity: 0, y: 30, filter: "blur(8px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <span className="text-[#a855f7] text-sm font-semibold tracking-widest uppercase mb-4 block">COMECE AGORA</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
               Teste o CloudConta gratuitamente.<br />Sem compromisso.

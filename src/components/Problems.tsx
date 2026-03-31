@@ -25,7 +25,7 @@ export default function Problems() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left - text */}
           <ParallaxSection speed={0.1}>
-            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+            <motion.div initial={{ opacity: 0, y: 30, filter: "blur(8px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
               <span className="text-[#a855f7] text-sm font-semibold tracking-widest uppercase mb-4 block">O PROBLEMA QUE VOCÊ CONHECE BEM</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
                 Você não deveria perder tempo com o que pode ser automático.

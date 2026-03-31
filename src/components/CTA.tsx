@@ -12,7 +12,7 @@ export default function CTA() {
       <div className="bg-orb bg-orb-1 w-[600px] h-[600px] bg-[#8b5cf6] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.1]" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+        <motion.div initial={{ opacity: 0, y: 30, filter: "blur(8px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
             Pronto para colocar seu escritório no{" "}
             <span className="gradient-text">piloto automático</span>?

@@ -80,9 +80,9 @@ function ShowcaseHero() {
       {/* Hero image — Dashboard large */}
       <motion.div
         style={{ y, scale, rotateX, transformPerspective: 1200 }}
-        className="relative mx-auto max-w-5xl"
+        className="relative mx-auto max-w-3xl"
       >
-        <div className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_100px_rgba(16,185,129,0.15),0_10px_40px_rgba(0,0,0,0.5)]">
+        <div className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(16,185,129,0.12),0_8px_30px_rgba(0,0,0,0.4)]">
           {/* Browser bar */}
           <div className="flex items-center gap-2 px-4 py-2.5 border-b border-white/5 bg-[#0d0b1a]">
             <div className="flex gap-1.5">
