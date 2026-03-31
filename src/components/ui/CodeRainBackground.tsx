@@ -27,13 +27,15 @@ const CODE_SNIPPETS = [
 
 export default function CodeRainBackground() {
   const lines = useMemo(() => {
+    // Deterministic pseudo-random to avoid hydration mismatch
+    const seeded = (i: number, offset: number) => ((i * 2654435761 + offset) % 1000) / 1000;
     return Array.from({ length: 20 }, (_, i) => ({
       id: i,
       text: CODE_SNIPPETS[i % CODE_SNIPPETS.length],
       left: `${(i * 7.3) % 100}%`,
-      duration: 15 + Math.random() * 25,
-      delay: Math.random() * -30,
-      opacity: 0.03 + Math.random() * 0.05,
+      duration: 15 + seeded(i, 1) * 25,
+      delay: seeded(i, 2) * -30,
+      opacity: 0.03 + seeded(i, 3) * 0.05,
     }));
   }, []);
 

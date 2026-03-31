@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import CodeRainBackground from "./ui/CodeRainBackground";
-import StormParallax from "./ui/StormParallax";
+import ProceduralStorm from "./ui/ProceduralStorm";
 
 const stats = [
   { value: "7+", label: "Módulos integrados", color: "text-[#10b981]" },
@@ -27,8 +27,8 @@ export default function Hero() {
 
   return (
     <section ref={sectionRef} className="relative flex items-center justify-center overflow-hidden pt-24 pb-12 md:pt-32 md:pb-16">
-      {/* Storm clouds parallax background */}
-      <StormParallax />
+      {/* Procedural storm clouds - no images needed */}
+      <ProceduralStorm />
 
       {/* Additional effects on top of clouds */}
       <div className="absolute inset-0 z-[5]">
