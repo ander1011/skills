@@ -17,18 +17,18 @@ export default function FloatingCard({ children, className = "", delay = 0, bgIm
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.8, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className={`relative bg-[#0d0b1a]/80 backdrop-blur-xl border border-white/[0.06] rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.4)] overflow-hidden ${className}`}
+      className={`relative border border-white/[0.06] rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.4)] overflow-hidden ${bgImage ? "bg-transparent" : "bg-[#0d0b1a]/80 backdrop-blur-xl"} ${className}`}
     >
-      {/* Background image */}
+      {/* Background image — visible! */}
       {bgImage && (
         <>
           <img
             src={bgImage}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover opacity-[0.12]"
+            className="absolute inset-0 w-full h-full object-cover opacity-40"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-[#0d0b1a]/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0d0b1a]/70 via-[#0d0b1a]/60 to-[#0d0b1a]/80" />
         </>
       )}
 
