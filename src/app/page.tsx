@@ -5,6 +5,7 @@ import ParticlesBackground from "@/components/ui/ParticlesBackground";
 import FloatingCard from "@/components/ui/FloatingCard";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import SystemShowcase from "@/components/SystemShowcase";
 import Problems from "@/components/Problems";
 import Modules from "@/components/Modules";
 import Benefits from "@/components/Benefits";
@@ -29,6 +30,10 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
+
+          <FloatingCard className="p-0 overflow-hidden max-w-7xl mx-auto mx-4 sm:mx-6 lg:mx-auto mb-6">
+            <SystemShowcase />
+          </FloatingCard>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 pb-12">
             <FloatingCard className="p-0 overflow-hidden">
