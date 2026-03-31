@@ -114,10 +114,8 @@ function ShowcaseHero() {
 
 function ShowcaseItem({
   item,
-  index,
 }: {
   item: (typeof showcaseItems)[0];
-  index: number;
 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
@@ -125,9 +123,6 @@ function ShowcaseItem({
   const textY = useTransform(scrollYProgress, [0, 1], [30, -30]);
   const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.9, 1, 1, 0.95]);
   const rotateY = item.align === "right" ? -6 : 6;
-
-  // Skip first item (dashboard) — it's the hero
-  if (index === 0) return null;
 
   return (
     <div ref={ref} className="py-12 md:py-20">
@@ -213,8 +208,8 @@ export default function SystemShowcase() {
     <section className="relative py-12 md:py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ShowcaseHero />
-        {showcaseItems.map((item, i) => (
-          <ShowcaseItem key={item.label} item={item} index={i} />
+        {showcaseItems.slice(1).map((item) => (
+          <ShowcaseItem key={item.label} item={item} />
         ))}
       </div>
     </section>
