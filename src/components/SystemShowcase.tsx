@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import { motion, useScroll, useTransform } from "framer-motion";
 import ParallaxSection from "./ui/ParallaxSection";
 
@@ -94,14 +94,12 @@ function ShowcaseHero() {
               <span className="text-gray-500 text-[10px]">v2.cloudconta.com.br/workspace</span>
             </div>
           </div>
-          <div className="relative aspect-[16/9] bg-[#0d0b1a]">
-            <Image
+          <div className="relative aspect-[16/9] bg-[#0d0b1a] overflow-hidden">
+            <img
               src="/screenshots/dashboard.png"
               alt="CloudConta Dashboard — 110 empresas, obrigações fiscais em tempo real"
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 768px) 100vw, 1024px"
-              priority
+              className="w-full h-full object-cover object-top"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
             />
           </div>
         </div>
@@ -159,13 +157,12 @@ function ShowcaseItem({
                 <span className="text-gray-600 text-[9px]">v2.cloudconta.com.br</span>
               </div>
             </div>
-            <div className="relative aspect-[16/10] bg-[#0d0b1a]">
-              <Image
+            <div className="relative aspect-[16/10] bg-[#0d0b1a] overflow-hidden">
+              <img
                 src={item.image}
                 alt={`CloudConta — ${item.title}`}
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 640px"
+                className="w-full h-full object-cover object-top"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
               />
             </div>
           </div>

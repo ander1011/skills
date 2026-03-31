@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import CodeRainBackground from "./ui/CodeRainBackground";
+import StormParallax from "./ui/StormParallax";
 
 const stats = [
   { value: "7+", label: "Módulos integrados", color: "text-[#10b981]" },
@@ -26,12 +27,13 @@ export default function Hero() {
 
   return (
     <section ref={sectionRef} className="relative flex items-center justify-center overflow-hidden pt-24 pb-12 md:pt-32 md:pb-16">
-      {/* Local background effects (orbs + grid only, particles & lightning are global) */}
-      <div className="absolute inset-0">
+      {/* Storm clouds parallax background */}
+      <StormParallax />
+
+      {/* Additional effects on top of clouds */}
+      <div className="absolute inset-0 z-[5]">
         <CodeRainBackground />
-        <div className="bg-orb bg-orb-1 w-[700px] h-[700px] bg-[#8b5cf6] -top-[300px] -left-[200px]" />
-        <div className="bg-orb bg-orb-2 w-[600px] h-[600px] bg-[#10b981] -bottom-[200px] -right-[200px]" />
-        <div className="absolute inset-0 grid-bg opacity-30" />
+        <div className="absolute inset-0 grid-bg opacity-20" />
       </div>
 
       <motion.div style={{ y: textY, opacity }} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
