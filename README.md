@@ -6,6 +6,7 @@ Skills especializadas para Claude Code.
 
 | Pasta | Descrição |
 |-------|-----------|
+| `analista-tributario/` | Apuração, conferência e planejamento tributário (PT-BR) |
 | `code-review/` | Revisão de código |
 | `cold-email/` | Email frio B2B |
 | `content/` | Criação de conteúdo |
