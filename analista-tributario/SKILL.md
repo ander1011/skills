@@ -92,12 +92,29 @@ RECOMENDAÇÃO
 
 Detalhes técnicos por tema estão em `references/`. Carregar apenas o arquivo necessário para o pedido específico, não tudo:
 
-- `references/regimes-tributarios.md` — Simples, Presumido, Real, MEI, limites, anexos, fatores R.
+### Base de conhecimento (consulta sob demanda)
+- `references/regimes-tributarios.md` — Simples, Presumido, Real, MEI, limites, anexos, Fator R.
 - `references/reforma-tributaria.md` — CBS, IBS, IS, cronograma 2026–2033, regimes específicos.
 - `references/sped-obrigacoes.md` — Calendário, layouts, multas, retificações.
 - `references/icms-st-difal.md` — Substituição tributária, DIFAL, MVA, convênios.
 - `references/pis-cofins.md` — Cumulativo, não-cumulativo, monofásico, créditos, recuperação.
 - `references/retencoes.md` — IRRF, INSS, ISS, IN RFB 1.234, responsabilidade tributária.
+
+### Apuração + Revisão + Entrega (carregar SEMPRE que o pedido for Lucro Real)
+- `references/lucro-real-checklist-rfb.md` — Checklist de 40+ pontos cruzados pela RFB (ECD/ECF/EFD-Contrib/DCTFWeb/folha). Usar como roteiro obrigatório de revisão.
+- `references/relatorio-apuracao-template.md` — Template do relatório executivo (9 seções, da capa à declaração do CRC). Saída em markdown estruturado pronta para PDF/Pandoc ou conversão em deck via Gamma.
+- `references/exemplo-apuracao-lucro-real.md` — Caso completo Indústria Aurora (1T26): mostra raciocínio ponta a ponta, do balancete ao deck. Modelo a seguir.
+
+### Fluxo Lucro Real (apurar → revisar → entregar)
+Quando o pedido for **apuração + revisão + relatório** de Lucro Real, executar nesta ordem:
+1. Coleta de contexto (Passo 1 da skill).
+2. Apuração tributo a tributo (PIS/COFINS, IRPJ, CSLL) — seguir `pis-cofins.md` + LALUR.
+3. Revisão item a item conforme `lucro-real-checklist-rfb.md`, marcando ✅/⚠️/🔴 e quantificando exposição.
+4. Identificar oportunidades (Lei do Bem, JCP, Tema 69 retroativo, etc.).
+5. Montar entregável conforme `relatorio-apuracao-template.md`.
+6. Se cliente pedir apresentação visual, gerar deck via Gamma a partir das seções 1, 4, 5, 6 e 7 do template.
+
+Tomar `exemplo-apuracao-lucro-real.md` como espelho do nível de profundidade esperado.
 
 ## Anti-padrões (não fazer)
 
